@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: demo-api
+  profiles:
+    active: dev
+# Tomcat
+server:
+  port: 10000
+  tomcat:
+    uri-encoding: UTF-8
+    max-threads: 500
+    min-spare-threads: 30
+  connection-timeout: -1m
+  servlet:
+    session:
+      timeout: 30m
+    context-path: /
+logging:
+  level:
+    com.wy.smart: debug
+    org.springframework: WARN
+    org.spring.springboot.dao: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  security:
+    enabled: false
+endpoints: 
+  metrics: 
+    sensitive: false   
+    enabled: true
+  health:
+    sensitive: false  
+    enabled: true

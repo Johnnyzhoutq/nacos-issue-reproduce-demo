@@ -1,0 +1,8 @@
+spring:
+  cloud: 
+    nacos: 
+      discovery: 
+        server-addr: 192.168.1.159:8848,192.168.1.159:8849
+        namingLoadCacheAtStart: true
+        #服务空间隔离
+        namespace: 6b0b8f3d-41fa-4ebd-8615-3e72b5d74904
